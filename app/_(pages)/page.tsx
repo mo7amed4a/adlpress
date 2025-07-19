@@ -3,13 +3,11 @@ import HeroSection from '@/components/pages/home/HeroSection'
 import ProductsSection from '@/components/pages/home/ProductsSection';
 import CategoriesSection from '@/components/pages/home/categoriesSection';
 import Image from 'next/image';
-import AxiosApp from '@/lib/axios';
 import useFetch from '@/hooks/use-fetch';
-import ProductModal from '@/components/pages/home/ProductModal';
 
 export default function Page() {
   const {data} = useFetch(`/home-page?populate[sections][populate][products][populate]=*`)
-  const sections = data?.data?.sections
+  // const sections = data?.data?.sections
   const sectionsTop = data?.data?.sections.slice(0, 2)
   const sectionsBottom = data?.data?.sections.slice(2)
   
