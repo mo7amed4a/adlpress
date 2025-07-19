@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Subfooter() {
   return (
-    <div className="grid grid-cols-1 mt-6">
+    <div className="grid grid-cols-1 mt-6 mb-4">
       <div className="flex flex-wrap justify-center items-center gap-6">
         {[1, 2, 3].map((num) => (
           <div
